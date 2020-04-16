@@ -25,7 +25,7 @@ with open("employee_data1", 'r') as readFilecsv: 
 		list.append(address)
 columns=["Name","Department","Date Of Birth","Address"]
  
-with open("Writing_File",'w') as filewrite:
-	writer=csv.writer(filewrite)
+with open("Writing_File",'w') as filewrites:
+	writer=csv.writer(filewrites)
 	writer.writerow(columns)
 	writer.writerows(list)
