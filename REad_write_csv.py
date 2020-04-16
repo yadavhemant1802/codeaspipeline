@@ -8,9 +8,10 @@ import requests
 import xlxswriter
 import stmp
 import time
+
 list=[]
-with open("employee_data1", 'r') as readFile: 
-    data = csv.reader(readFile)    
+with open("employee_data1", 'r') as readFilecsv: 
+    data = csv.reader(readFilecsv)    
     next(data)  
     for d in data:  
 		name=d[0] 
@@ -24,7 +25,7 @@ with open("employee_data1", 'r') as readFile: 
 		list.append(address)
 columns=["Name","Department","Date Of Birth","Address"]
  
-with open("Writing_File",'w') as file:
-	writer=csv.writer(file)
+with open("Writing_File",'w') as filewrite:
+	writer=csv.writer(filewrite)
 	writer.writerow(columns)
 	writer.writerows(list)
