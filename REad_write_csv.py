@@ -9,7 +9,7 @@ import xlxswriter
 import stmp
 import time
 
-list=[]
+lisst=[]
 with open("employee_data1", 'r') as readFilecsv: 
     data = csv.reader(readFilecsv)    
     next(data)  
@@ -19,10 +19,10 @@ with open("employee_data1", 'r') as readFilecsv: 
 		dob=d[2] 
 		address=d[3]
 		
-		list.append(name)
-		list.append(ept)
-		list.append(dob)
-		list.append(address)
+		lisst.append(name)
+		lisst.append(dept)
+		lisst.append(dob)
+		lisst.append(address)
 columns=["Name","Department","Date Of Birth","Address"]
  
 with open("Writing_File",'w') as filewritess:
